@@ -435,6 +435,27 @@
       color: var(--gray);
     }
 
+
+    .dashboard-visual {
+      padding: 0 0 clamp(90px, 12vw, 180px);
+      display: grid;
+      grid-template-columns: .42fr 1.58fr;
+      gap: clamp(35px, 7vw, 110px);
+      align-items: end;
+    }
+    .dashboard-visual img {
+      width: 100%;
+      max-width: 1444px;
+      height: auto;
+      display: block;
+      border: 1px solid var(--black);
+    }
+    .dashboard-visual figcaption {
+      margin: 0;
+      padding-bottom: 8px;
+      color: var(--gray);
+    }
+
     .about {
       background: var(--white);
       color: var(--black);
@@ -555,10 +576,12 @@
       .process-grid { grid-template-columns: repeat(3, 1fr); }
       .process-step:nth-child(4) { border-left: 0; }
       .process-step:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
-      .case-visual {
+      .case-visual,
+      .dashboard-visual {
         display: block;
       }
-      .case-visual figcaption { margin-bottom: 24px; }
+      .case-visual figcaption,
+      .dashboard-visual figcaption { margin-bottom: 24px; }
       .case-visual img {
         width: 100%;
         height: auto;
@@ -692,6 +715,19 @@
             Building and launching a physical seafood tool set through Amazon FBA.
           </p>
           <a class="arrow-link" href="#case-study-02">View case study →</a>
+        </div>
+      </article>
+      <article class="index-row">
+        <div class="index-number" aria-hidden="true">03</div>
+        <div>
+          <p class="index-kicker">Solana / Decision Support / Product Development</p>
+          <h3 class="index-title"><span>Solana</span> <span>Trading</span> <span>Dashboard</span></h3>
+        </div>
+        <div class="index-detail">
+          <p>
+            A customer-facing interface for structured market analysis and trade planning.
+          </p>
+          <a class="arrow-link" href="#case-study-03">View case study →</a>
         </div>
       </article>
     </section>
@@ -986,6 +1022,166 @@
           <p class="integrity-note">
             The monetary result reflects Amazon disbursements received. It is not presented
             as net profit or gross sales revenue.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="case-hero case-two" id="case-study-03" aria-labelledby="case-title-03">
+      <div class="case-grid shell">
+        <div>
+          <div class="case-number label">Case study 03</div>
+          <h2 class="case-title" id="case-title-03"><span>Solana</span> <span>Trading</span> <span>Dashboard</span></h2>
+          <p class="case-description">
+            Turning technical indicators, broader market context, and risk checks
+            into a structured decision-support interface for customers.
+          </p>
+          <ul class="tags" aria-label="Project tools and methods">
+            <li>JavaScript</li>
+            <li>Node.js</li>
+            <li>Solana</li>
+            <li>Market data</li>
+            <li>Risk logic</li>
+            <li>AI-assisted development</li>
+          </ul>
+        </div>
+
+        <dl class="project-meta">
+          <div><dt>Product</dt><dd>Solana Trading Dashboard</dd></div>
+          <div><dt>Focus</dt><dd>Decision support / Market analysis</dd></div>
+          <div><dt>Role</dt><dd>Product strategy & AI-assisted development</dd></div>
+          <div><dt>Audience</dt><dd>Customers</dd></div>
+          <div><dt>Year</dt><dd>2026</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <figure class="dashboard-visual shell">
+      <figcaption class="label">Working interface snapshot · 2026 · Prices reflect the captured moment</figcaption>
+      <img
+        src="assets/solana-trading-dashboard.png"
+        alt="Dark Solana trading decision dashboard showing a WAIT state, market quality, risk-reward status, a nine-point readiness checklist, and BTC and SOL market ranges."
+        width="1444"
+        height="1114"
+        loading="lazy"
+      >
+    </figure>
+
+    <section class="process" aria-labelledby="solana-process-title">
+      <div class="shell">
+        <div class="process-head">
+          <h2 id="solana-process-title">The process</h2>
+          <span class="label">Define → Model → Connect → Qualify → Design → Package</span>
+        </div>
+        <div class="process-grid">
+          <article class="process-step">
+            <span class="process-number">01</span>
+            <span class="process-label">Define</span>
+            <p>Set the customer need: clearer, more disciplined trade planning.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-number">02</span>
+            <span class="process-label">Model</span>
+            <p>Translated the trading framework into explicit decision rules.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-number">03</span>
+            <span class="process-label">Connect</span>
+            <p>Brought together SOL, BTC, sentiment, news, and macro context.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-number">04</span>
+            <span class="process-label">Qualify</span>
+            <p>Added indicator, market-quality, and risk-reward checks.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-number">05</span>
+            <span class="process-label">Design</span>
+            <p>Made WAIT, LONG, and SHORT guidance immediately scannable.</p>
+          </article>
+          <article class="process-step">
+            <span class="process-number">06</span>
+            <span class="process-label">Package</span>
+            <p>Prepared the working dashboard and setup flow for customers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="story">
+      <div class="story-pair shell">
+        <section class="story-section" aria-labelledby="problem-title-03">
+          <p class="label">01 · Problem</p>
+          <h2 id="problem-title-03">The noise</h2>
+          <p>
+            Trading decisions can require customers to interpret technical indicators,
+            multiple timeframes, broader market behavior, news, and risk at the same time.
+            The product needed to organize those inputs without encouraging forced trades
+            or pretending uncertainty did not exist.
+          </p>
+        </section>
+        <section class="story-section" aria-labelledby="framework-title-03">
+          <p class="label">02 · Strategy</p>
+          <h2 id="framework-title-03">The framework</h2>
+          <p>
+            I defined a decision framework that treats waiting as a valid outcome. It evaluates
+            SOL across multiple timeframes, checks BTC context, reviews sentiment and macro risk,
+            and qualifies potential setups through market-quality and risk-reward rules.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <section class="highlight" aria-labelledby="solution-title-03">
+      <div class="highlight-grid shell">
+        <div>
+          <p class="label">03 · Product development</p>
+          <h2 id="solution-title-03">The execution</h2>
+        </div>
+        <div class="highlight-copy">
+          <p class="lead">
+            The framework became a live browser dashboard designed for fast, disciplined review.
+          </p>
+          <p>
+            I designed the product requirements, customer experience, and decision logic, then
+            used AI-assisted development to help implement the Node.js analysis engine and
+            JavaScript interface. The dashboard refreshes its signal state every five seconds
+            and explains why a setup is ready, blocked, or still forming.
+          </p>
+          <div class="tools" aria-label="Tools and skills">
+            <span>Product strategy</span>
+            <span>Decision modeling</span>
+            <span>JavaScript</span>
+            <span>Node.js</span>
+            <span>API integration</span>
+            <span>Risk qualification</span>
+            <span>Interface design</span>
+            <span>AI-assisted development</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="result" aria-labelledby="result-title-03">
+      <div class="result-grid shell">
+        <div>
+          <p class="label">04 · Outcome</p>
+          <h2 id="result-title-03">The result</h2>
+        </div>
+        <div class="result-copy">
+          <p class="lead">
+            A working customer-facing dashboard that turns complex market inputs
+            into structured WAIT, LONG, or SHORT decision support.
+          </p>
+          <p>
+            The product combines multi-timeframe SOL analysis, BTC context, technical indicators,
+            market-quality checks, risk-reward qualification, news, sentiment, macro filters,
+            alerts, and a trade-readiness checklist in one interface.
+          </p>
+          <p class="integrity-note">
+            The dashboard supports planning only. It does not execute trades, connect to a wallet,
+            guarantee profits, or replace the customer's judgment.
           </p>
         </div>
       </div>
