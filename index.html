@@ -422,6 +422,10 @@
     .case-visual img {
       width: 100%;
       max-width: 1080px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      align-self: start;
       display: block;
       border: 1px solid var(--black);
     }
@@ -551,7 +555,16 @@
       .process-grid { grid-template-columns: repeat(3, 1fr); }
       .process-step:nth-child(4) { border-left: 0; }
       .process-step:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
-      .case-visual { grid-template-columns: 1fr; gap: 24px; }
+      .case-visual {
+        display: block;
+      }
+      .case-visual figcaption { margin-bottom: 24px; }
+      .case-visual img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+      }
       .about-copy,
       .principles { max-width: 650px; }
     }
