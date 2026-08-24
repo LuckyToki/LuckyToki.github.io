@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Antoinette Gulley — e-commerce, technical operations, customer experience, and AI-assisted problem solving.">
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#ffffff">
   <title>Antoinette Gulley | E-Commerce & Technical Operations</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,8 +42,8 @@
       left: 16px;
       z-index: 50;
       padding: 9px 13px;
-      background: var(--white);
-      color: var(--black);
+      background: var(--black);
+      color: var(--white);
       transform: translateY(-200%);
     }
     .skip-link:focus { transform: translateY(0); }
@@ -63,9 +63,9 @@
       position: sticky;
       top: 0;
       z-index: 30;
-      background: var(--black);
-      color: var(--white);
-      border-bottom: 1px solid var(--dark-line);
+      background: var(--white);
+      color: var(--black);
+      border-bottom: 1px solid var(--black);
     }
     .nav {
       width: var(--page);
@@ -202,11 +202,12 @@
     .index-title {
       margin: 0;
       font-family: var(--serif);
-      font-size: clamp(40px, 5.5vw, 82px);
+      font-size: clamp(34px, 4.2vw, 64px);
       font-weight: 400;
-      line-height: .94;
+      line-height: 1;
       letter-spacing: -.05em;
     }
+    .index-title span, .case-title span { display: block; }
     .index-detail { max-width: 430px; }
     .index-detail p { margin: 0 0 25px; color: #373737; }
 
@@ -236,9 +237,9 @@
       max-width: 760px;
       margin: 0 0 32px;
       font-family: var(--serif);
-      font-size: clamp(62px, 7.5vw, 118px);
+      font-size: clamp(48px, 5.8vw, 90px);
       font-weight: 400;
-      line-height: .84;
+      line-height: .94;
       letter-spacing: -.065em;
     }
     .case-description {
@@ -277,8 +278,9 @@
     .project-meta dd { margin: 0; font-size: 13px; text-transform: uppercase; }
 
     .process {
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
+      color: var(--black);
+      border-top: 1px solid var(--black);
       padding: clamp(90px, 11vw, 165px) 0;
     }
     .process-head {
@@ -295,17 +297,17 @@
       font-weight: 400;
       letter-spacing: -.05em;
     }
-    .process-head .label { color: #a4a4a4; }
+    .process-head .label { color: var(--gray); }
     .process-grid {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      border-top: 1px solid #555555;
-      border-bottom: 1px solid #555555;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
     .process-step {
       min-height: 340px;
       padding: 30px 22px 34px;
-      border-left: 1px solid #555555;
+      border-left: 1px solid var(--line);
     }
     .process-step:first-child { border-left: 0; }
     .process-number {
@@ -316,7 +318,7 @@
       line-height: 1;
     }
     .process-label { display: block; margin-bottom: 20px; }
-    .process-step p { max-width: 170px; margin: 0; color: #c8c8c8; font-size: 13px; }
+    .process-step p { max-width: 170px; margin: 0; color: #363636; font-size: 13px; }
 
     .story { background: var(--white); color: var(--black); }
     .story-pair {
@@ -351,8 +353,9 @@
     }
 
     .highlight {
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
+      color: var(--black);
+      border-top: 1px solid var(--black);
       padding: clamp(100px, 14vw, 210px) 0;
     }
     .highlight-grid {
@@ -368,13 +371,13 @@
       font-size: clamp(30px, 3.4vw, 50px);
       line-height: 1.08;
     }
-    .highlight-copy p { color: #c9c9c9; font-size: 16px; }
+    .highlight-copy p { color: #363636; font-size: 16px; }
     .tools {
       display: flex;
       flex-wrap: wrap;
       gap: 10px 30px;
       margin-top: 48px;
-      color: var(--white);
+      color: var(--black);
       font-size: 10px;
       font-weight: 600;
       letter-spacing: .16em;
@@ -408,8 +411,9 @@
     }
 
     .about {
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
+      color: var(--black);
+      border-top: 1px solid var(--black);
       padding: clamp(100px, 14vw, 210px) 0;
     }
     .about-grid {
@@ -425,10 +429,10 @@
       line-height: .88;
       letter-spacing: -.06em;
     }
-    .about-copy { color: #c8c8c8; font-size: clamp(16px, 1.5vw, 20px); }
+    .about-copy { color: #363636; font-size: clamp(16px, 1.5vw, 20px); }
     .about-copy p { margin-top: 0; }
     .principles { margin: 0; padding: 0; list-style: none; }
-    .principles li { padding: 13px 0; border-top: 1px solid #555555; }
+    .principles li { padding: 13px 0; border-top: 1px solid var(--black); }
 
     .experience { padding: clamp(100px, 14vw, 190px) 0; }
     .experience-head {
@@ -462,8 +466,9 @@
     .experience-row .label { color: var(--gray); }
 
     .contact {
-      background: var(--black);
-      color: var(--white);
+      background: var(--white);
+      color: var(--black);
+      border-top: 1px solid var(--black);
       padding: clamp(100px, 14vw, 210px) 0;
     }
     .contact h2 {
@@ -476,9 +481,9 @@
       letter-spacing: -.065em;
     }
     .footer {
-      background: var(--black);
-      color: var(--white);
-      border-top: 1px solid var(--dark-line);
+      background: var(--white);
+      color: var(--black);
+      border-top: 1px solid var(--black);
     }
     .footer-inner {
       width: var(--page);
@@ -511,7 +516,7 @@
       .project-meta { max-width: 620px; }
       .process-grid { grid-template-columns: repeat(3, 1fr); }
       .process-step:nth-child(4) { border-left: 0; }
-      .process-step:nth-child(-n+3) { border-bottom: 1px solid #555555; }
+      .process-step:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
       .about-copy,
       .principles { max-width: 650px; }
     }
@@ -533,10 +538,10 @@
       .project-index { padding: 100px 0; }
       .index-head h2 { font-size: 54px; }
       .index-number { font-size: 100px; }
-      .index-title { font-size: 46px; }
+      .index-title { font-size: clamp(36px, 11vw, 48px); line-height: 1; }
       .index-detail { margin-left: 0; }
       .case-hero { padding: 95px 0; }
-      .case-title { font-size: 62px; }
+      .case-title { font-size: clamp(42px, 14vw, 58px); line-height: .98; }
       .project-meta div { grid-template-columns: 1fr; gap: 4px; }
       .process-head { align-items: flex-start; flex-direction: column; }
       .process-grid { grid-template-columns: 1fr; border-bottom: 0; }
@@ -545,7 +550,7 @@
         min-height: auto;
         padding: 34px 0 40px;
         border-left: 0;
-        border-bottom: 1px solid #555555;
+        border-bottom: 1px solid var(--line);
       }
       .process-number { margin-bottom: 30px; font-size: 64px; }
       .process-step p { max-width: 260px; }
@@ -619,7 +624,7 @@
         <div class="index-number" aria-hidden="true">01</div>
         <div>
           <p class="index-kicker">Shopify / E-Commerce / Operations</p>
-          <h3 class="index-title">Shopify Shipping Solution</h3>
+          <h3 class="index-title"><span>AI-Assisted</span> <span>Shopify Shipping</span> <span>Solution</span></h3>
         </div>
         <div class="index-detail">
           <p>
@@ -634,7 +639,7 @@
       <div class="case-grid shell">
         <div>
           <div class="case-number label">Case study 01</div>
-          <h2 class="case-title" id="case-title">Shopify Shipping Solution</h2>
+          <h2 class="case-title" id="case-title"><span>AI-Assisted</span> <span>Shopify Shipping</span> <span>Solution</span></h2>
           <p class="case-description">
             Tracing a customer complaint to a missing geographic condition
             in a live Shopify checkout workflow.
