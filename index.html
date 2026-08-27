@@ -497,19 +497,61 @@
     }
     .experience-row {
       display: grid;
-      grid-template-columns: .45fr .85fr .7fr;
-      gap: 40px;
-      padding: 34px 0;
+      grid-template-columns: .62fr 1.08fr .3fr;
+      gap: clamp(28px, 5vw, 72px);
+      align-items: start;
+      padding: clamp(38px, 5vw, 64px) 0;
       border-top: 1px solid var(--black);
     }
-    .experience-row h3 {
+    .experience-row h3,
+    .competency-head h3 {
       margin: 0;
       font-family: var(--serif);
       font-size: 29px;
       font-weight: 400;
+      line-height: 1.05;
     }
-    .experience-row p { margin: 0; color: #363636; }
-    .experience-row .label { color: var(--gray); }
+    .experience-org {
+      margin: 10px 0 0;
+      color: var(--gray);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .experience-details p { margin: 0; color: #363636; }
+    .experience-details ul {
+      margin: 20px 0 0;
+      padding-left: 18px;
+      color: #363636;
+    }
+    .experience-details li + li { margin-top: 7px; }
+    .experience-row > .label { color: var(--gray); }
+    .competencies {
+      margin-top: clamp(80px, 10vw, 140px);
+      padding-top: clamp(55px, 7vw, 90px);
+      border-top: 8px solid var(--black);
+    }
+    .competency-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 30px;
+      margin-bottom: 48px;
+    }
+    .competency-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: clamp(24px, 5vw, 70px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .competency-grid li {
+      padding: 15px 0;
+      border-top: 1px solid var(--black);
+      font-size: 13px;
+    }
 
     .contact {
       background: var(--white);
@@ -588,6 +630,7 @@
         aspect-ratio: 1 / 1;
         object-fit: contain;
       }
+      .competency-grid { grid-template-columns: repeat(2, 1fr); }
       .about-copy,
       .principles { max-width: 650px; }
     }
@@ -636,8 +679,10 @@
       .story-section h2,
       .highlight h2,
       .result h2 { font-size: 58px; margin-bottom: 40px; }
-      .experience-head { align-items: flex-start; flex-direction: column; }
-      .experience-row { grid-template-columns: 1fr; gap: 12px; }
+      .experience-head,
+      .competency-head { align-items: flex-start; flex-direction: column; }
+      .experience-row { grid-template-columns: 1fr; gap: 16px; }
+      .competency-grid { grid-template-columns: 1fr; }
       .contact h2 { font-size: 68px; }
       .footer-inner { flex-direction: column; }
     }
@@ -657,8 +702,9 @@
       <div class="nav-links">
         <a href="#work">Work</a>
         <a href="#approach">Approach</a>
+        <a href="#experience">Experience</a>
         <a href="#about">About</a>
-        <a href="https://github.com/LuckyToki">GitHub ↗</a>
+        <a href="https://github.com/agulleydigital">GitHub ↗</a>
       </div>
     </nav>
   </header>
@@ -668,18 +714,18 @@
       <div class="intro-grid">
         <h1 id="intro-title"><span>Antoinette</span><span>Gulley</span></h1>
         <div class="intro-copy">
-          <p class="label">E-Commerce · Technical Operations · Automation</p>
+          <p class="label">Technology Support Specialist · Technical Operations · E-Commerce</p>
           <p>
-            I solve technical and operational problems that affect customers and businesses,
-            combining hands-on troubleshooting with e-commerce experience and AI-assisted solutions.
+            Technology Support Specialist with more than seven years of experience diagnosing
+            hardware, software, authentication, network, account-access, and customer-facing system issues.
           </p>
           <a class="arrow-link" href="#work">View selected work →</a>
         </div>
       </div>
       <div class="intro-foot">
         <ul class="disciplines" aria-label="Professional focus">
-          <li>Technology</li>
-          <li>Operations</li>
+          <li>Technical Support</li>
+          <li>Troubleshooting</li>
           <li>Customer Experience</li>
         </ul>
         <span class="label">Portfolio · Selected work</span>
@@ -1211,38 +1257,117 @@
       </div>
     </section>
 
-    <section class="experience shell" aria-labelledby="experience-title">
+    <section class="experience shell" id="experience" aria-labelledby="experience-title">
       <div class="experience-head">
-        <h2 id="experience-title">Experience index</h2>
-        <span class="label">Selected disciplines</span>
+        <h2 id="experience-title">Technical experience</h2>
+        <span class="label">Technology Support Specialist</span>
       </div>
+
       <article class="experience-row">
-        <h3>Technical Support</h3>
-        <p>More than seven years diagnosing Mac hardware, software, and connected-peripheral issues while supporting customers directly.</p>
-        <span class="label">Troubleshooting / Customer experience</span>
+        <div>
+          <h3>Independent Technical Systems Analyst</h3>
+          <p class="experience-org">Independent technical practice</p>
+        </div>
+        <div class="experience-details">
+          <p>Designing technical workflows that improve systems analysis, troubleshooting, and decision-making.</p>
+          <ul>
+            <li>Develops JavaScript tools for debugging and workflow efficiency.</li>
+            <li>Tests AI-generated technical outputs for accuracy and reliability.</li>
+            <li>Researches authentication, Web3, and wallet-integration workflows.</li>
+          </ul>
+        </div>
+        <span class="label">March 2023–Present</span>
       </article>
+
       <article class="experience-row">
-        <h3>E-Commerce Operations</h3>
-        <p>Website maintenance, products, promotions, customer data, marketing support, Shopify, and marketplace operations.</p>
-        <span class="label">Shopify / Marketplace management</span>
+        <div>
+          <h3>Website Coordinator</h3>
+          <p class="experience-org">Confidential specialty retailer</p>
+        </div>
+        <div class="experience-details">
+          <p>Supported customer-facing website operations across authentication, CMS, checkout, and quality assurance.</p>
+          <ul>
+            <li>Used behavioral and system information to identify user-experience problems.</li>
+            <li>Tested website content, pricing, inventory, and CMS updates.</li>
+            <li>Collaborated with technical teams to improve website performance.</li>
+          </ul>
+        </div>
+        <span class="label">Sep 2022–Feb 2023</span>
       </article>
+
       <article class="experience-row">
-        <h3>Amazon FBA</h3>
-        <p>Hands-on seller experience spanning sourcing, international shipping, listings, PPC, fulfillment, and customer research.</p>
-        <span class="label">Seller Central / Marketplace operations</span>
+        <div>
+          <h3>Customer Advocacy Advisor</h3>
+          <p class="experience-org">Apple</p>
+        </div>
+        <div class="experience-details">
+          <p>Investigated recurring customer-facing application, authentication, and service-reliability issues.</p>
+          <ul>
+            <li>Analyzed support trends to identify recurring system defects.</li>
+            <li>Collaborated with engineering and cross-functional teams.</li>
+            <li>Documented findings and recommended process improvements.</li>
+          </ul>
+        </div>
+        <span class="label">Sep 2020–Mar 2021</span>
       </article>
+
       <article class="experience-row">
-        <h3>AI & Automation</h3>
-        <p>Independent technical work translating small-business needs into practical technology and automation opportunities.</p>
-        <span class="label">Business analysis / Applied AI</span>
+        <div>
+          <h3>Senior Technical Advisor</h3>
+          <p class="experience-org">Apple</p>
+        </div>
+        <div class="experience-details">
+          <p>Provided high-volume technical support for hardware, software, operating-system, authentication, and network issues.</p>
+          <ul>
+            <li>Reproduced software defects and documented findings for engineering teams.</li>
+            <li>Resolved complex incidents through systematic troubleshooting and root-cause analysis.</li>
+            <li>Created technical documentation and shared troubleshooting knowledge.</li>
+          </ul>
+        </div>
+        <span class="label">Apr 2014–Sep 2020</span>
       </article>
+
+      <article class="experience-row">
+        <div>
+          <h3>CompTIA A+</h3>
+          <p class="experience-org">Professional certification</p>
+        </div>
+        <div class="experience-details">
+          <p>Currently strengthening foundational expertise across hardware, operating systems, networking, security, and IT support.</p>
+        </div>
+        <span class="label">In progress</span>
+      </article>
+
+      <div class="competencies" aria-labelledby="competencies-title">
+        <div class="competency-head">
+          <h3 id="competencies-title">Core technical capabilities</h3>
+          <span class="label">Support / Diagnostics / Systems</span>
+        </div>
+        <ul class="competency-grid">
+          <li>Software & application support</li>
+          <li>Hardware & device troubleshooting</li>
+          <li>Operating-system support</li>
+          <li>Network troubleshooting</li>
+          <li>Authentication & account access</li>
+          <li>Technical diagnostics</li>
+          <li>Log analysis</li>
+          <li>Root-cause analysis</li>
+          <li>Issue reproduction & escalation</li>
+          <li>Engineering collaboration</li>
+          <li>Technical documentation</li>
+          <li>Remote end-user support</li>
+          <li>Customer service & de-escalation</li>
+          <li>User training & mentoring</li>
+          <li>HTML, CSS & JavaScript</li>
+        </ul>
+      </div>
     </section>
 
     <section class="contact" aria-labelledby="contact-title">
       <div class="shell">
         <p class="label">Contact</p>
         <h2 id="contact-title">Let’s solve something real.</h2>
-        <a class="arrow-link" href="https://github.com/LuckyToki">GitHub →</a>
+        <a class="arrow-link" href="https://github.com/agulleydigital">GitHub →</a>
       </div>
     </section>
   </main>
